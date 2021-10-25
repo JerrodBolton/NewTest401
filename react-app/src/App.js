@@ -18,7 +18,7 @@ class App extends React.Component {
   }
 
   addItem = async (item) => {
-    await post(`${API_SERVER}/items`, item);
+    await axios.post(`${API_SERVER}/items`, item);
     this.getItems();
   }
 
@@ -26,7 +26,7 @@ class App extends React.Component {
     const response = await axios.get(`${API_SERVER}/items`);
     const items = response.data;
     this.setState({ items });
-  }
+  }``
 
   async componentDidMount() {
     await this.getItems();
