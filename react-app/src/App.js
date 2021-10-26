@@ -8,7 +8,7 @@ import Items from './components/Items.js';
 
 const API_SERVER = process.env.REACT_APP_API;
 
-class App extends React.Component {
+class App extends React.Component{
 
   constructor(props) {
     super(props);
@@ -26,7 +26,7 @@ class App extends React.Component {
     const response = await axios.get(`${API_SERVER}/items`);
     const items = response.data;
     this.setState({ items });
-  }``
+  }
 
   async componentDidMount() {
     await this.getItems();

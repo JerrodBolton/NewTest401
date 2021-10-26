@@ -10,7 +10,7 @@ Data.addAnItem = async(req,res,next) => {
     const item = new ItemModel(data);
     await item.save();
     res.status(200).json(item);
-  } catch(e) { next(e.message); }
+  } catch(e) {next(e.message); }
 }
 
 Data.getAllItems = async(req, res) => {
